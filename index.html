@@ -210,12 +210,32 @@
                         </span>
                     </div>
                     
-                    <div class="relative h-90 overflow-hidden">
-                        <img src="foto1.jpeg" 
-                             alt="Transplante" 
-                             class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/90 to-transparent p-4">
-                           
+        <div class="relative h-90 overflow-hidden rounded-xl">
+
+    <!-- Capa do Vídeo -->
+    <div id="videoCover" class="absolute inset-0 bg-black/50 flex items-center justify-center cursor-pointer group z-10">
+        
+        <!-- Botão Play -->
+        <div class="w-20 h-20 rounded-full bg-[#6B8E23] flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
+            <i class="fa-solid fa-play text-white text-2xl ml-1"></i>
+        </div>
+        
+    </div>
+
+    <!-- Vídeo -->
+    <video 
+        id="meuVideo"
+        class="w-full h-full object-cover"
+        playsinline
+        preload="metadata">
+        
+        <source src="ato 1.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+    </video>
+
+</div>
+
+
     <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
 </a>
         
@@ -294,5 +314,16 @@
             }
         });
     </script>
+    <script>
+    const video = document.getElementById("meuVideo");
+    const cover = document.getElementById("videoCover");
+
+    cover.addEventListener("click", () => {
+        cover.style.display = "none";
+        video.muted = false;
+        video.play();
+    });
+</script>
+
 </body>
 </html>
