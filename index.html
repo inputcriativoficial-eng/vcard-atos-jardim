@@ -210,24 +210,17 @@
                         </span>
                     </div>
                     
-        <div class="relative h-90 overflow-hidden rounded-xl">
-
-    <!-- Capa do Vídeo -->
-    <div id="videoCover" class="absolute inset-0 bg-black/50 flex items-center justify-center cursor-pointer group z-10">
-        
-        <!-- Botão Play -->
-        <div class="w-20 h-20 rounded-full bg-[#6B8E23] flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
-            <i class="fa-solid fa-play text-white text-2xl ml-1"></i>
-        </div>
-        
-    </div>
+        <div class="relative overflow-hidden rounded-xl">
 
     <!-- Vídeo -->
     <video 
         id="meuVideo"
         class="w-full h-full object-cover"
         playsinline
-        preload="metadata">
+        webkit-playsinline
+        preload="auto"
+        controls
+        poster="capa.jpg">
         
         <source src="ato1.mp4" type="video/mp4">
         Seu navegador não suporta vídeo.
